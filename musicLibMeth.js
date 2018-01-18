@@ -91,6 +91,21 @@ var library = {
         }
       }
     }
+  },
+
+  addTrackToPlaylist: function (trackId, playlistId) {
+
+    for (var p in this.playlists) {
+      var plists = this.playlists[p];
+      var  plistId = this.playlists[p].id;
+      // console.log(plistId);
+      var plistTrack = this.playlists[p].tracks;
+      // console.log(plistTrack);
+        if (playlistId === plistId) {
+          plistTrack.push(trackId)
+          // console.log(plistTrack);
+        }
+    }
   }
 
 }
@@ -99,6 +114,8 @@ var library = {
 // library.printPlaylists();
 // library.printTracks();
 // library.printPlaylist("p01");
+// library.addTrackToPlaylist("t02", "p02");
+// console.log(library.playlists);
 
 
 
