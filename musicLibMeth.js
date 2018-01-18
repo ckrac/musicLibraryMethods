@@ -52,14 +52,53 @@ var library = {
       // console.log(tAlbum);
       console.log(tId + ": " + tName + " by " + tArtist + " (" + tAlbum + ")" );
     }
+  },
+
+  printPlaylist: function (playlistId) {
+
+    for (var p in this.playlists)  {
+      var plists = this.playlists[p];
+      var plistId = this.playlists[p].id;
+      // console.log(plistId);
+      var plistName = this.playlists[p].name;
+      // console.log(plistName);
+      var plistTrack = this.playlists[p].tracks;
+      var plistTracks = this.playlists[p].tracks.length;
+      // console.log(plistTracks);
+      if(playlistId === plistId) {
+        console.log(plistId + ": " + plistName + " - " + plistTracks + " tracks");
+      }
+
+      if (playlistId === plistId) {
+        // console.log(plistId + "true");
+        // console.log(plistTrack);
+        for (var i = 0; i < plistTracks; i++) {
+          // console.log(plistTrack[i]);
+          for (var t in this.tracks) {
+            var tId = this.tracks[t].id;
+            // console.log(tId);
+            var tName = this.tracks[t].name;
+            // console.log(tName);
+            var tArtist = this.tracks[t].artist;
+            // console.log(tArtist);
+            var tAlbum = this.tracks[t].album;
+            // console.log(tAlbum);
+            if (tId === plistTrack[i]) {
+              console.log(tId + ": " + tName + " by " + tArtist + " (" + tAlbum + ")" );
+            }
+          }
+
+        }
+      }
+    }
   }
 
 }
 
 
-library.printPlaylists();
-library.printTracks();
-
+// library.printPlaylists();
+// library.printTracks();
+// library.printPlaylist("p01");
 
 
 
