@@ -115,7 +115,7 @@ var library = {
   addTrack: function (name, artist, album) {
 
     var newTrack = this.uid();
-    console.log(newTrack);
+    // console.log(newTrack);
     var trackToAdd = {
       id: newTrack,
       name: name,
@@ -125,6 +125,20 @@ var library = {
     this.tracks[newTrack] = trackToAdd;
     // console.log(library);
 
+  },
+
+  addPlaylist: function (name) {
+
+    var newPlayList = this.uid();
+    // console.log(newPlayList);
+    var playListAdd = {
+      id: newPlayList,
+      name: name,
+      tracks: []
+    }
+    // console.log(playListAdd);
+    this.playlists[newPlayList] = playListAdd;
+    // console.log(library);
   }
 
 
@@ -138,7 +152,9 @@ var library = {
 // console.log(library.playlists);
 // console.log(library.uid());
 // library.addTrack("burn", "usher", "anAlbum" );
-// console.log(library);
+library.addPlaylist("old playlist");
+console.log(library);
+
 
 
 
