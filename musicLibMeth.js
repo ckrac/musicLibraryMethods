@@ -106,7 +106,27 @@ var library = {
           // console.log(plistTrack);
         }
     }
+  },
+
+  uid: function() {
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+  },
+
+  addTrack: function (name, artist, album) {
+
+    var newTrack = this.uid();
+    console.log(newTrack);
+    var trackToAdd = {
+      id: newTrack,
+      name: name,
+      artist: artist ,
+      album: album
+    }
+    this.tracks[newTrack] = trackToAdd;
+    // console.log(library);
+
   }
+
 
 }
 
@@ -116,6 +136,13 @@ var library = {
 // library.printPlaylist("p01");
 // library.addTrackToPlaylist("t02", "p02");
 // console.log(library.playlists);
+// console.log(library.uid());
+// library.addTrack("burn", "usher", "anAlbum" );
+// console.log(library);
+
+
+
+
 
 
 
