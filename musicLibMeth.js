@@ -152,8 +152,8 @@ var library = {
 // console.log(library.playlists);
 // console.log(library.uid());
 // library.addTrack("burn", "usher", "anAlbum" );
-library.addPlaylist("old playlist");
-console.log(library);
+// library.addPlaylist("old playlist");
+// console.log(library);
 
 
 
