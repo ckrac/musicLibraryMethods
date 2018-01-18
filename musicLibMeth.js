@@ -37,12 +37,28 @@ var library = {
       // console.log(plistTracks);
       console.log(plistId + ": " + plistName + " - " + plistTracks + " tracks");
       }
+  },
+
+  printTracks: function () {
+
+    for (var t in this.tracks) {
+      var tId = this.tracks[t].id;
+      // console.log(tId);
+      var tName = this.tracks[t].name;
+      // console.log(tName);
+      var tArtist = this.tracks[t].artist;
+      // console.log(tArtist);
+      var tAlbum = this.tracks[t].album;
+      // console.log(tAlbum);
+      console.log(tId + ": " + tName + " by " + tArtist + " (" + tAlbum + ")" );
+    }
   }
 
 }
 
 
 library.printPlaylists();
+library.printTracks();
 
 
 
